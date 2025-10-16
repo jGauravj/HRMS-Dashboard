@@ -17,7 +17,7 @@ const Navbar = ({ onToggleSidebar }) => {
 
   return (
     <div>
-      <div className="p-4 flex justify-between items-center border-b ">
+      <div className="p-4 flex justify-between items-center border-b flex-wrap">
         <div className="flex items-center gap-2">
           <Button onClick={onToggleSidebar} size="sm" variant="outline">
             <Sidebar />

@@ -41,7 +41,7 @@ const Dashboard = () => {
           xAxisKey="label"
           dataKey="attendance"
           color="var(--chart-1)"
-          height={350}
+          height={300}
           className="bg-card p-4 rounded-lg shadow-sm"
         />
       </div>
@@ -54,7 +54,7 @@ const Dashboard = () => {
             nameKey="type"
             height={300}
             className="bg-card p-4 rounded-lg shadow-sm"
-            colors={["#ef4444", "#3b82f6", "#10b981", "#f59e0b"]} // Red, Blue, Green, Yellow
+            colors={["#ef4444", "#3b82f6", "#10b981", "#f59e0b"]}
             showLabel={true}
           />
         </div>
@@ -73,7 +73,7 @@ const Dashboard = () => {
               "var(--chart-4)",
               "var(--chart-5)",
             ]}
-            showGrid={false} // Grid removed as requested
+            showGrid={false}
           />
         </div>
       </div>

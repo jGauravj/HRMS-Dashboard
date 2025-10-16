@@ -16,7 +16,7 @@ const LineChart = ({
   dataSeries,
   xAxisKey,
   color = "#8884d8",
-  height = 400,
+  height = 300,
   className = "",
   strokeWidth = 1,
   fillOpacity = 0.4,
@@ -78,8 +78,8 @@ const LineChart = ({
             data={data}
             margin={{
               top: 10,
-              right: 30,
-              left: 0,
+              right: 10,
+              left: -50,
               bottom: 0,
             }}
           >
