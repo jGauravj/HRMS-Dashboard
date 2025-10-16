@@ -41,17 +41,10 @@ const ProtectedLayout = () => {
           <X className="h-5 w-5" />
         </Button>
 
-        <div className="h-screen">
+        <div className="">
           <Sidebar isOpen={isSidebarOpen} />
         </div>
       </div>
-
-      {isSidebarOpen && (
-        <div
-          className="fixed inset-0 bg-black h-screen bg-opacity-40 z-30 md:hidden"
-          onClick={() => setIsSidebarOpen(false)}
-        />
-      )}
 
       <main
         className={`
@@ -62,8 +55,8 @@ const ProtectedLayout = () => {
         `}
       >
         <Navbar onToggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} />
-        <div className="h-[calc(100vh-60px)] overflow-auto">
-          <div className="w-full max-w-full overflow-hidden">
+        <div className="h-screen overflow-auto">
+          <div className="w-full max-w-full overflow-hidden mb-20">
             <Outlet />
           </div>
         </div>
