@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
 import { Outlet } from "react-router-dom";
 import { X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const ProtectedLayout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -32,24 +33,22 @@ const ProtectedLayout = () => {
           ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}
         `}
       >
-        <div className="flex justify-between items-center px-4 py-3 border-b border-border">
-          <h2 className="text-lg font-semibold">Menu</h2>
-          <button
-            onClick={() => setIsSidebarOpen(false)}
-            className="p-1 rounded-full hover:bg-muted"
-          >
-            <X className="h-5 w-5" />
-          </button>
-        </div>
+        <Button
+          onClick={() => setIsSidebarOpen(false)}
+          className="p-1 absolute right-10 top-5  hover:bg-primary"
+          size="sm"
+        >
+          <X className="h-5 w-5" />
+        </Button>
 
-        <div className="max-h-[calc(100vh-60px)] overflow-y-auto">
+        <div className="h-screen">
           <Sidebar isOpen={isSidebarOpen} />
         </div>
       </div>
 
       {isSidebarOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-40 z-30 md:hidden"
+          className="fixed inset-0 bg-black h-screen bg-opacity-40 z-30 md:hidden"
           onClick={() => setIsSidebarOpen(false)}
         />
       )}
